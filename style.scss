@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+// Reset CSS
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+$btn-color: #2a3537;
+$heading-color: #010101;
+$sub-heading-color: #7f7f81;
+$light-grey: #f6f7f9;
+$dark-grey: #9ca3b0;
+$light: #fff;
+
+$title-size: 40px;
+
+.main-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  @media (max-width: 768px) {
+    height: auto;
+  }
+  .image-wrap {
+    padding: 0 2rem;
+    height: 100%;
+    width: 70%;
+    background-image: url(./cloth-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+      color: $light;
+      font-size: $title-size;
+
+      span {
+        display: block;
+        color: $heading-color;
+      }
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .form-wrap {
+    width: 30%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    padding: 2rem;
+
+    .logo {
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        color: $heading-color;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      span.letter {
+        background-color: $heading-color;
+        color: $light;
+        padding: 0.1rem 0.5rem;
+        border-radius: 50px;
+        text-transform: lowercase;
+      }
+    }
+
+    .title {
+      font-size: $title-size;
+      color: $heading-color;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-top: 0;
+      color: $sub-heading-color;
+      font-weight: 600;
+    }
+
+    .signup-form {
+      margin: 2rem 0;
+      .group {
+        position: relative;
+        input {
+          font-weight: 500;
+          width: 100%;
+          border-radius: 0.4rem;
+          border: none;
+          &:focus {
+            outline: none;
+          }
+          background-color: $light-grey;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          padding-left: 1rem;
+          margin: 0.3rem 0;
+        }
+      }
+
+      .group-2 {
+        display: flex;
+        .group {
+          flex: 1;
+          margin-right: 1rem;
+          &:last-child {
+            margin-left: 1rem;
+            margin-right: 0;
+          }
+        }
+      }
+      .form-submit {
+        width: 100%;
+        border-radius: 0.4rem;
+        border: none;
+        &:focus {
+          outline: none;
+        }
+        border: 2px solid transparent;
+        background-color: $btn-color;
+        color: $light;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        margin: 1.5rem 0;
+        font-weight: 700;
+        font-size: 20px;
+        cursor: pointer;
+        &:active {
+          color: $btn-color;
+          background-color: $light;
+          border-color: $btn-color;
+        }
+      }
+    }
+    p:last-child {
+      text-align: center;
+      a {
+        color: $sub-heading-color;
+      }
+    }
+  }
+}
